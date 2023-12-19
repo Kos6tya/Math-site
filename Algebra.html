@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгебра</title>
+    <link rel="stylesheet" href="Alg.css">
+</head>
+
+<body>
+    <header>
+        <h1>Математичний Довідник</h1>
+    </header>
+
+    <nav>
+        <a href="Mainmath.html">Домашня</a>
+        <a href="Algebra.html">Алгебра</a>
+        <a href="Geometry.html">Геометрія</a>
+        <a href="Trigonometry.html">Тригонометрія</a>
+        <a href="Math.html">Математика</a>
+        <a href="Mat.html">Математичні Операції</a>
+        <a href="Calc.html">Калькулятор</a>
+    </nav>
+    <h1>Алгебра</h1>
+
+    <div class="problem">
+        <h2>Задача 1</h2>
+        <p>Рівняння</p>
+        <p>Знайдіть х: 2x + 5 = 11</p>    
+        <button onclick="showHint(1)">Підказка</button>
+        <button onclick="showSolution(1)">Рішення</button>
+        <button onclick="checkAnswer(1)">Підтвердити відповідь</button>
+        <p id="hint1"></p>
+        <p id="solution1"></p>
+        <p id="result1"></p>
+        <input type="text" id="answer1" placeholder="Введіть відповідь (x)">
+    </div>
+
+    <div class="problem">
+        <h2>Задача 2</h2>
+        <p>Обчислення виразу</p>
+        <p>Знайдіть y: (3y - 7) * 2 = 10</p>
+        <button onclick="showHint(2)">Підказка</button>
+        <button onclick="showSolution(2)">Рішення</button>
+        <button onclick="checkAnswer(2)">Підтвердити відповідь</button>
+        <p id="hint2"></p>
+        <p id="solution2"></p>
+        <p id="result2"></p>
+        <input type="text" id="answer2" placeholder="Введіть відповідь (y)">
+    </div>
+
+    <div class="problem">
+        <h2>Задача 3</h2>
+        <p>Система рівнянь</p>
+        <p>Зайдіть x та y: <br> x + y = 5 <br> 2x - y = 3</p>
+        <button onclick="showHint(3)">Підказка</button>
+        <button onclick="showSolution(3)">Рішення</button>
+        <button onclick="checkAnswer(3)">Підтвердити відповідь</button>
+        <p id="hint3"></p>
+        <p id="solution3"></p>
+        <p id="result3"></p>
+        <input type="text" id="answer3" placeholder="Введіть відповідь (x,y)">
+    </div>
+    <div class="footer2">
+        <p>&copy; K21.1 Математичний Довідник </p>
+      </div>
+    <script src="Trig.js"></script>
+</body>
+
+</html>

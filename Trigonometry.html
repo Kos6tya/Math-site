@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тригонометрія</title>
+    <link rel="stylesheet" href="Alg.css">
+</head>
+<body>
+    <header>
+        <h1>Математичний Довідник</h1>
+    </header>
+
+    <nav>
+        <a href="Mainmath.html">Домашня</a>
+        <a href="Algebra.html">Алгебра</a>
+        <a href="Geometry.html">Геометрія</a>
+        <a href="Trigonometry.html">Тригонометрія</a>
+        <a href="Math.html">Математика</a>
+        <a href="Mat.html">Математичні Операції</a>
+        <a href="Calc.html">Калькулятор</a>
+    </nav>
+    <h1>Тригонометрія</h1>
+
+    <div class="problem">
+        <h2>Задача 1</h2>   
+        <p>Знайдіть значення синуса кута 30 градусів.</p>
+        <button onclick="showTrigHint(1)">Підказка</button>
+        <button onclick="showTrigSolution(1)">Рішення</button>
+        <button onclick="checkTrigAnswer(1)">Підтвердити відповідь</button>
+        <input type="text" id="trigAnswer1" placeholder="Введіть відповідь">
+        <p id="trigHint1"></p>
+        <p id="trigSolution1"></p>
+        <p id="trigResult1"></p>
+    </div>
+
+    <div class="problem">
+        <h2>Задача 2</h2>  
+        <p>Обчисліть значення тангенса кута 45 градусів.</p>
+        <button onclick="showTrigHint(2)">Підказка</button>
+        <button onclick="showTrigSolution(2)">Рішення</button>
+        <button onclick="checkTrigAnswer(2)">Підтвердити відповідь</button>
+        <input type="text" id="trigAnswer2" placeholder="Введіть відповідь">
+        <p id="trigHint2"></p>
+        <p id="trigSolution2"></p>
+        <p id="trigResult2"></p>
+    </div>
+
+    <div class="problem">
+        <h2>Задача 3</h2>   
+        <p>Знайдіть значення косинуса кута 60 градусів.</p>
+        <button onclick="showTrigHint(3)">Підказка</button>
+        <button onclick="showTrigSolution(3)">Рішення</button>
+        <button onclick="checkTrigAnswer(3)">Підтвердити відповідь</button>
+        <input type="text" id="trigAnswer3" placeholder="Введіть відповідь">
+        <p id="trigHint3"></p>
+        <p id="trigSolution3"></p>
+        <p id="trigResult3"></p>
+    </div>
+    <div class="footer2">
+        <p>&copy; K21.1 Математичний Довідник </p>
+      </div>
+    <script src="Trig.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Математичні операції</title>
+  <link rel="stylesheet" href="Alg.css">
+</head>
+
+<body>
+  <header>
+    <h1>Математичний Довідник</h1>
+  </header>
+  <nav>
+    <a href="Mainmath.html">Домашня</a>
+        <a href="Algebra.html">Алгебра</a>
+        <a href="Geometry.html">Геометрія</a>
+        <a href="Trigonometry.html">Тригонометрія</a>
+        <a href="Math.html">Математика</a>
+        <a href="Mat.html">Математичні Операції</a>
+        <a href="Calc.html">Калькулятор</a>
+  </nav>
+  <h1>Математичні Операції</h1>
+  <select id="operatorSelect">
+    <option value=" ">Всі</option>
+    <option value="+">Додавання (+)</option>
+    <option value="-">Віднімання (-)</option>
+    <option value="×">Множення (× або *)</option>
+    <option value="/">Ділення (÷ або /)</option>
+    <option value="sin">Синус угла (sin)</option>
+    <option value="tan">Тангенс угла (tan)</option>
+    <option value="ctg">Котангенс угла (ctg)</option>
+    <option value="asin">Арксинус угла (asin)</option>
+    <option value="acos">Аркосинус угла (acos)</option>
+    <option value="atan">Арктангенс угла (atan)</option>
+    <option value="actg">Аркотангенс угла (actg)</option>
+    <option value="log">Натуральний логаріфм (log)</option>
+  </select>
+  <button onclick="searchTasks()">Пошук оператору</button>
+  <ul id="tasksList">
+    <li>
+      <p>Додавання (+): Операція об'єднання двох чисел або виразів для отримання їх суми</p>
+      a + b = ?
+      <input type="number" id="num1" placeholder="Введіть перше число (a)">
+      <input type="number" id="num2" placeholder="Введіть друге число (b)">
+      <button onclick="Sum()">=</button>
+      <p id="result1"></p>
+    </li>
+    <li>
+      <p>Віднімання (-): Операція видалення одного числа або виразу з іншого для отримання різниці</p>
+      a - b = ?
+      <input type="number" id="num3" placeholder="Введіть перше число (a)">
+      <input type="number" id="num4" placeholder="Введіть друге число (b)">
+      <button onclick="Min()">=</button>
+      <p id="result2"></p>
+    </li>
+    <li>
+      <p>Множення (× або *): Операція повтореного додавання числа до себе або іншого числа певну кількість разів</p>
+      a * b = ?
+      <input type="number" id="num5" placeholder="Введіть перше число (a)">
+      <input type="number" id="num6" placeholder="Введіть друге число (b)">
+      <button onclick="Mnoj()">=</button>
+      <p id="result3"></p>
+    </li>
+    <li>
+      <p>Ділення (÷ або /): Операція розподілу числа на рівні частини або розподілу одного числа на інше</p>
+      a / b = ?
+      <input type="number" id="num7" placeholder="Введіть перше число (a)">
+      <input type="number" id="num8" placeholder="Введіть друге число (b)">
+      <button onclick="Dil()">=</button>
+      <p id="result4"></p>
+    </li>
+    <li>
+      <p>Піднесення до степеня (^ або **): Операція піднесення числа до певного степеня</p>
+      a ^ b = ?
+      <input type="number" id="num9" placeholder="Введіть перше число (a)">
+      <input type="number" id="num10" placeholder="Введіть друге число (b)">
+      <button onclick="Step()">=</button>
+      <p id="result5"></p>
+    </li>
+    <li>
+      <p>Взяття кореня (√): Операція знаходження числа, яке піднесене до певного степеня дає дане число</p>
+      √a = ?
+      <input type="number" id="num11" placeholder="Введіть число (a)">
+      <button onclick="Kor()">=</button>
+      <p id="result6"></p>
+    </li>
+    <li>
+      <p>Модуль (| |): Операція повернення абсолютного значення числа, відстані числа від нуля на числовій прямій</p>
+      |a| = ?
+      <input type="number" id="num12" placeholder="Введіть число (a)">
+      <button onclick="Modl()">=</button>
+      <p id="result7"></p>
+    </li>
+    <li>
+      <p>Остача від ділення (%): Операція повернення залишку від ділення одного числа на інше</p>
+      a % b = ?
+      <input type="number" id="num13" placeholder="Введіть перше число (a)">
+      <input type="number" id="num14" placeholder="Введіть друге число (b)">
+      <button onclick="Ostach()">=</button>
+      <p id="result8"></p>
+    </li>
+    <li>
+      <p>Синус угла (sin): Операція повернення значення синуса кута</p>
+      sin a = ?
+      <input type="number" id="num15" placeholder="Введіть число (a)">
+      <button onclick="Sin()">=</button>
+      <p id="result9"></p>
+    </li>
+    <li>
+      <p>Тангенс угла (tan): Операція повернення відношення протилежної сторони трикутника до його прилеглої катети</p>
+      tan a = ?
+      <input type="number" id="num16" placeholder="Введіть число (a)">
+      <button onclick="Tan()">=</button>
+      <p id="result10"></p>
+    </li>
+    <li>
+      <p>Котангенс угла (ctg): Операція повернення оберненого значення тангенсу, тобто ctg = 1/tan</p>
+      ctg a = ?
+      <input type="number" id="num17" placeholder="Введіть число (a)">
+      <button onclick="Ctg()">=</button>
+      <p id="result11"></p>
+    </li>
+    <li>
+      <p>Арксинус угла (asin): Операція оберненої функції синуса, яка повертає кут, що має задане значення синуса</p>
+      asin a = ?
+      <input type="number" id="num18" placeholder="Введіть число (a)">
+      <button onclick="Asin()">=</button>
+      <p id="result12"></p>
+    </li>
+    <li>
+      <p>Аркосинус угла (acos): Операція оберненої функції косинуса, що повертає кут, що має задане значення косинуса
+      </p>
+      asin a = ?
+      <input type="number" id="num19" placeholder="Введіть число (a)">
+      <button onclick="Acos()">=</button>
+      <p id="result13"></p>
+    </li>
+    <li>
+      <p>Арктангенс угла (atan): Операція оберненої функції тангенса, що повертає кут, який має задане значення тангенсу
+      </p>
+      asin a = ?
+      <input type="number" id="num20" placeholder="Введіть число (a)">
+      <button onclick="Atan()">=</button>
+      <p id="result14"></p>
+    </li>
+    <li>
+      <p>Аркотангенс угла (actg): Операція оберненої функції котангенсу, яка повертає кут, що має задане значення
+        котангенсу</p>
+      asin a = ?
+      <input type="number" id="num21" placeholder="Введіть число (a)">
+      <button onclick="Actg()">=</button>
+      <p id="result15"></p>
+    </li>
+    <li>
+      <p>Натуральний логаріфм (log): Операція, яка визначає, до якого ступеня потрібно підняти певне число, щоб отримати
+        дане значення</p>
+      asin a = ?
+      <input type="number" id="num22" placeholder="Введіть число (a)">
+      <button onclick="Log()">=</button>
+      <p id="result16"></p>
+    </li>
+  </ul>
+  <div class="footer2">
+    <p>&copy; K21.1 Математичний Довідник </p>
+  </div>
+  <script src="Trig.js"></script>
+</body>
+
+</html>
